@@ -1,0 +1,10 @@
+#1.Get states names with 'w'.Get states names with 'W'.
+data(USArrests)
+States = rownames(USArrests)
+grep("W",States,value = TRUE)
+grep("w",States,value = TRUE)
+
+#2.Prepare a Histogram of the number of characters in each US state.
+attributes(USArrests)$row.names
+no.ofcharacters<-nchar(States)
+hist(no.ofcharacters)
